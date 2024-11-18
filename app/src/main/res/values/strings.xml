@@ -9,4 +9,8 @@
     <string name="gallery">Galeri</string>
     <string name="analyze">Analyze</string>
     <string name="empty_image_warning">Silakan masukkan berkas gambar terlebih dahulu.</string>
+    <string name="description_app">Wheelify adalah aplikasi untuk memindai kendaraan di jalan tol.</string>
+    <string name="dummy_text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="get_started">Get Started</string>
+    <string name="get_done">Mari Kita Selesaikan</string>
 </resources>

@@ -12,16 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Wheelify"
         tools:targetApi="31">
+
+        <!-- Menambahkan SplashScreenActivity sebagai LAUNCHER -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name">
+            android:name=".splashscreen.SplashScreenActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <!-- MainActivity tetap ada setelah SplashScreenActivity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+
+    </application>
 </manifest>
