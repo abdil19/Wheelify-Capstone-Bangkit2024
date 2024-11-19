@@ -1,5 +1,7 @@
 package com.example.wheelify.splashscreen
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -26,6 +28,8 @@ class SplashScreenActivity : AppCompatActivity() {
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        playAnimation()
+
         sharedPreferences = getSharedPreferences("AppPreferences", MODE_PRIVATE)
         val isFirstRun = sharedPreferences.getBoolean("isFirstRun", true)
 
@@ -46,5 +50,23 @@ class SplashScreenActivity : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
+    }
+
+    private fun playAnimation() {
+        ObjectAnimator.ofFloat(binding.logo, View.TRANSLATION_X, -30f, 30f).apply {
+            duration = 10000
+            repeatCount = ObjectAnimator.INFINITE
+            repeatMode = ObjectAnimator.REVERSE
+        }.start()
+
+        val getStarted = ObjectAnimator.ofFloat(binding.getStarted, View.ALPHA, 1f).setDuration(100)
+        val together = AnimatorSet().apply {
+            playTogether(getStarted)
+        }
+
+        AnimatorSet().apply {
+            playSequentially(together)
+            start()
+        }
     }
 }

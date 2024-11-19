@@ -46,6 +46,7 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/logo" />
+
   <TextView
       android:id="@+id/detail_app"
       android:layout_width="wrap_content"
@@ -71,6 +72,8 @@
       android:text="@string/get_started"
       android:textStyle="bold"
       android:textSize="18sp"
+      android:alpha="0"
+      tools:alpha="100"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/detail_app"
