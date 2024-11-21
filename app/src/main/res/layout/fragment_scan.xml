@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -20,54 +19,58 @@
         android:id="@+id/previewImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/galleryButton"
         app:srcCompat="@drawable/ic_place_holder" />
 
-
-
     <Button
-        android:id="@+id/cameraXButton"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="@string/camera_x"
-        app:layout_constraintBottom_toTopOf="@+id/analyzeButton"
+        android:id="@+id/scanButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/circle_button"
+        android:contentDescription="Scan"
+        android:drawableTop="@drawable/ic_scan_48dp"
+        app:backgroundTint="@color/purple_secondary"
+        app:layout_constraintBottom_toTopOf="@id/galleryButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/galleryButton"
-        app:layout_constraintHorizontal_bias="0.5" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/previewImageView"
+        app:layout_constraintVertical_bias="0.951" />
 
     <Button
         android:id="@+id/galleryButton"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:elevation="2dp"
-        android:scaleType="fitCenter"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/gallery"
-        app:layout_constraintBottom_toTopOf="@+id/analyzeButton"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintEnd_toStartOf="@+id/cameraXButton"
+        android:background="@drawable/rounded_button"
+        app:backgroundTint="@color/purple_secondary"
+        app:layout_constraintBottom_toTopOf="@id/analyzeButton"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/analyzeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
         android:text="@string/analyze"
+        app:backgroundTint="@color/purple_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/galleryButton"
+        app:layout_constraintTop_toTopOf="@id/galleryButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
